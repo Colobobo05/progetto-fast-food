@@ -1,0 +1,341 @@
+/* =========================================
+   FOGLIO DI STILE UNIVOCO PER RISTORANTE.HTML
+   ========================================= */
+
+/* Importiamo il font  */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+/* Le tue variabili di base */
+:root {
+    --bg-dark: #16161e; /* Grigio scuro elegantissimo, non nero puro */
+    --bg-surface: #20202b; /* Grigio leggermente più chiaro per le card e l'header */
+    --accent-color: #D462FF; /* Il tuo colore secondario */
+    --text-light: #f5f5f7;
+    --text-muted: #9e9ea7;
+    --border-radius-soft: 16px; /* Angoli morbidi */
+    --transition-smooth: all 0.3s ease;
+}
+
+/* --- RESET & BASE --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-light);
+    transition: var(--transition-smooth);
+}
+
+/* --- HEADER FIXED --- */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(32, 32, 43, 0.85);
+    backdrop-filter: blur(12px); /* Effetto vetro elegante */
+    z-index: 1000;
+    padding-right: 5% ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(212, 98, 255, 0.1);
+}
+
+.logo span {
+    font-size: 3 rem;
+    font-weight: 700;
+    color: var(--accent-color);
+    letter-spacing: 1px;
+}
+/* Allinea il logo se c'è anche del testo vicino */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Evita che il logo diventi gigantesco e rompa la barra di navigazione */
+.logo img {
+    height: 135px; 
+    width: auto;
+    object-fit: contain;
+}
+
+/* Effetto Hover sulle parole del menu */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+nav ul li a {
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+nav ul li a:hover {
+    color: var(--accent-color);
+    text-shadow: 0 0 10px rgba(212, 98, 255, 0.6); /* Glow effect  */
+    transform: scale(1.05);
+    display: inline-block;
+}
+
+/* --- HERO SECTION & RICERCA --- */
+.hero {
+    margin-top: 100px; /* Spazio per l'header fixed */
+    padding: 4rem 5%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.hero h1 span {
+    color: var(--accent-color);
+}
+
+.search-bar {
+    display: flex;
+    width: 100%;
+    max-width: 600px;
+    background: var(--bg-surface);
+    border-radius: 50px;
+    padding: 0.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: var(--transition-smooth);
+}
+
+.search-bar:focus-within {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 15px rgba(212, 98, 255, 0.3);
+}
+
+.search-bar input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    padding: 0.5rem 1.5rem;
+    color: var(--text-light);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    outline: none;
+}
+
+.search-bar button {
+    background: var(--accent-color);
+    color: #000; /* Testo scuro sul bottone acceso per massimo contrasto */
+    border: none;
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+}
+
+.search-bar button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px var(--accent-color);
+}
+
+/* --- MAIN CONTENT --- */
+main {
+    flex: 1; /* Spinge il footer in basso se la pagina è mezza vuota */
+    margin-top: 100px; /* Lascia spazio all'header fisso */
+}
+
+/* --- SEZIONE DETTAGLIO PIATTO --- */
+.dish-detail-section {
+    padding: 2rem 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.dish-layout {
+    display: flex;
+    gap: 4rem;
+    background: var(--bg-surface);
+    padding: 3rem;
+    border-radius: var(--border-radius-soft);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.dish-image-large {
+    flex: 1;
+    border-radius: var(--border-radius-soft);
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(212, 98, 255, 0.15);
+}
+
+.dish-image-large img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    max-height: 500px;
+}
+
+.dish-info-box {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.dish-info-box h1 {
+    font-size: 2.5rem;
+    color: var(--text-light);
+}
+
+.dish-restaurant-name {
+    font-size: 1.2rem;
+    color: var(--accent-color);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.dish-desc {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.dish-price-large {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-light);
+    margin-top: 1rem;
+}
+
+/* --- BOTTONI E QUANTITÀ --- */
+.add-to-cart-box {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 1rem;
+    align-items: center;
+}
+
+.quantity-selector {
+    display: flex;
+    align-items: center;
+    background: var(--bg-dark);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.quantity-btn {
+    background: transparent;
+    color: var(--text-light);
+    border: none;
+    padding: 0.8rem 1.2rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+}
+
+.quantity-btn:hover {
+    background: rgba(212, 98, 255, 0.2);
+    color: var(--accent-color);
+}
+
+.quantity-number {
+    padding: 0 1rem;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.btn-add-cart {
+    background: var(--accent-color);
+    color: #000;
+    border: none;
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+    flex: 1; 
+}
+
+.btn-add-cart:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 20px rgba(212, 98, 255, 0.4);
+}
+
+/* --- FOOTER UNIVOCO --- */
+footer {
+    background: rgba(22, 22, 30, 0.95);
+    border-top: 1px solid rgba(212, 98, 255, 0.1);
+    padding: 3rem 5% 1.5rem;
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.social-icons img {
+    width: 35px;
+    height: 35px;
+    transition: var(--transition-smooth);
+    opacity: 0.7;
+}
+
+.social-icons img:hover {
+    opacity: 1;
+    transform: translateY(-3px) scale(1.1);
+    filter: drop-shadow(0 0 8px var(--accent-color));
+}
+
+.footer-bottom {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+/* --- RESPONSIVE PER TELEFONI --- */
+@media (max-width: 900px) {
+    .dish-layout {
+        flex-direction: column;
+        padding: 1.5rem;
+        gap: 2rem;
+    }
+    .dish-image-large img {
+        max-height: 300px;
+    }
+    header nav ul {
+        gap: 1rem;
+        font-size: 0.9rem;
+    }
+}

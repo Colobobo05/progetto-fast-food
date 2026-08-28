@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fast Food Sito</title>
+    <link rel="icon" href="./loghi/logo2.png" type="image/png">
+    <link rel="stylesheet" href="./index/styleindex.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <a href="index.html"><img src="./loghi/logo.png" alt="Logo del sito"></a>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="menu.html">Ristoranti</a></li>
+            
+            <li id="nav-accedi"><a href="accedi.html">Accedi</a></li>
+            
+            <li id="nav-profilo" class="nav-item-dropdown" style="display: none;">
+                <a href="#" class="profilo-link">Profilo</a>
+                <div class="dropdown-content">
+                    <a href="profilo.html">I miei Dati</a> 
+                    
+                    <a href="ristorante.html" class="classe-ristoratore" style="color: var(--accent-color); font-weight: bold;">Il mio Ristorante</a>
+                    <a href="gestione-ordini.html" class="classe-ristoratore" style="color: #f39c12; font-weight: bold;">Gestione Cucina</a>
+                    <a href="statistiche.html" class="classe-ristoratore" style="color: #3498db; font-weight: bold;">Statistiche</a>
+                    
+                    <a href="ordini.html#active-orders" class="classe-cliente">Ordine Attuale</a>
+                    <a href="ordini.html#past-orders" class="classe-cliente">Storico Ordini</a>
+                    
+                    <a href="#" id="logout-btn" style="color: #e74c3c !important;">Log Out</a>
+                </div>
+            </li>
+            
+            <li><a href="carrello.html" style="color: var(--accent-color); font-weight: bold;">Carrello</a></li>
+        </ul>
+    </nav>
+</header>
+
+    <main>
+        <section class="hero">
+            <h1>Il cibo che vuoi, <span>alla portata di un click</span></h1>
+                        
+            <div style="margin-top: 40px; text-align: center;">
+                <button onclick="window.location.href='menu.html'" style="background: var(--accent-color); color: #000; padding: 18px 50px; font-size: 1.3rem; border-radius: 50px; border: none; font-weight: bold; cursor: pointer; box-shadow: 0 8px 20px rgba(0,0,0,0.4); transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                    Esplora i Ristoranti ➔
+                </button>
+            </div>
+        </section>
+
+        <section class="results-section">
+            <h2 style="text-align: center; margin-bottom: 2rem; font-size: 2rem;"> I Piatti Più Ricercati</h2>
+            
+            <div class="grid-container" id="bestsellers-container">
+                <p style="text-align: center; color: var(--text-muted);">Caricamento dei piatti più richiesti...</p>
+            </div>
+        </section>
+        
+        <section style="margin-top: 4rem; margin-bottom: 4rem;">
+            <div style="text-align: center; margin-bottom: 3rem;">
+                <h2>Scegli il tuo <span style="color: var(--accent-color);">Locale</span></h2>
+            </div>
+            
+            <div id="restaurants-track">
+                <p style="text-align: center; color: var(--text-muted); width: 100%;">Caricamento ristoranti in corso...</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="logo">
+                <img src="./loghi/logo.png" alt="Fast Food Logo">
+            </div>
+            <div class="social-icons">
+                <a href="#"><img src="./loghi/facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="./loghi/instagram.png" alt="Instagram"></a>
+                <a href="#"><img src="./loghi/whatsapp.png" alt="WhatsApp"></a>
+                <a href="#"><img src="./loghi/gmail.png" alt="Email"></a>
+                
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 Fast Food Colombo Davide 61779A
+        </div>
+    </footer>
+    
+    <script src="./js/app.js"></script>
+</body>
+</html>
