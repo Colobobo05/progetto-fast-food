@@ -12,23 +12,31 @@ Questo repository contiene l'intero ecosistema dell'applicazione. L'obiettivo de
 📦 fast-food-project
 ┣ 📂 backend
 ┃ ┣ 📂 config          # Connessione a MongoDB e configurazioni globali
-┃ ┣ 📂 controllers     # Logica operativa (es. authController.js)
-┃ ┣ 📂 middleware      # Filtri di sicurezza (es. verifyToken, checkRole)
-┃ ┣ 📂 models          # Schemi Mongoose (User.js, Menu.js, Order.js)
-┃ ┣ 📂 routes          # Indirizzamento API (es. authRoutes.js)
+┃ ┣ 📂 controllers     # Logica operativa (authController, menuController, orderController)
+┃ ┣ 📂 middleware      # Filtri di sicurezza (verifyToken, checkRole)
+┃ ┣ 📂 models          # Schemi Mongoose (User.js, MenuItem.js, Order.js)
+┃ ┣ 📂 routes          # Indirizzamento API (authRoutes, menuRoutes, orderRoutes)
 ┃ ┣ 📜 .env            # Variabili d'ambiente segrete (NON caricato su GitHub)
 ┃ ┣ 📜 server.js       # Cuore del backend, avvio Express e Swagger
 ┃ ┗ 📜 package.json    # Dipendenze e script di avvio (npm start)
 ┗ 📂 frontend
   ┣ 📂 css             # Fogli di stile centralizzati
   ┃ ┗ 📜 style.css     # Regole grafiche e Media Queries (Mobile-First)
-  ┣ 📂 images          # Asset visivi (es. logo.png)
+  ┣ 📂 images          # Asset visivi (logo.png, banner, foto prodotti)
   ┣ 📂 js              # Logica client-side modulare
-  ┃ ┣ 📜 app.js        # Script globale (Gestione navbar e Logout)
-  ┃ ┗ 📜 accedi.js     # Fetch API per il Login e gestione Local Storage
-  ┣ 📜 index.html      # Homepage
-  ┣ 📜 accedi.html     # Pagina di autenticazione
-  ┗ 📜 menu.html       # Pagina ricerca piatti
+  ┃ ┣ 📜 app.js        # Script globale (Gestione navbar, sessione e Logout)
+  ┃ ┣ 📜 accedi.js     # Fetch API Login e salvataggio Local Storage
+  ┃ ┣ 📜 registrati.js # Fetch API Registrazione nuovo account
+  ┃ ┣ 📜 menu.js       # Caricamento dinamico piatti e filtri di ricerca
+  ┃ ┣ 📜 carrello.js   # Gestione quantità, totale e invio ordine
+  ┃ ┗ 📜 ordini.js     # Visualizzazione storico ordini e stato avanzamento
+  ┣ 📜 index.html      # Homepage di benvenuto
+  ┣ 📜 accedi.html     # Pagina di autenticazione (Login)
+  ┣ 📜 registrati.html # Pagina registrazione nuovo utente
+  ┣ 📜 menu.html       # Catalogo prodotti e selezione categorie
+  ┣ 📜 carrello.html   # Riepilogo carrello e checkout
+  ┣ 📜 ordini.html     # Tracciamento e storico ordini cliente
+  ┗ 📜 dashboard.html  # Pannello di gestione riservato al Ristoratore
 </pre>
 ## 🏗 Architettura e Tecnologie
 
