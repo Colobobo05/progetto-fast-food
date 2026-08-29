@@ -8,13 +8,26 @@
 
 Questo repository contiene l'intero ecosistema dell'applicazione. L'obiettivo del progetto è dimostrare la corretta implementazione delle moderne pratiche di sviluppo web, dalla persistenza dei dati fino alla sicurezza degli endpoint.
 
-## 📁 Struttura del Progetto (Pattern MVC)
-Il codice backend è stato organizzato separando rigidamente le responsabilità:
-
-* **`models/` (Data Layer):** Contiene gli schemi Mongoose. Definisce la struttura, i tipi di dato e le validazioni rigorose pre-salvataggio.
-* **`controllers/` (Business Logic):** Il cuore operativo. Questi file ricevono le richieste, interrogano il database asincronamente e formulano le risposte JSON.
-* **`routes/` (Routing):** Mappa gli endpoint URL (es. `/api/auth/login`) ai rispettivi metodi del controller, mantenendo il server pulito e modulare.
-* **`middleware/` (Security Layer):** Funzioni di intercettazione che verificano la validità del token JWT e i permessi di ruolo prima di concedere l'accesso ai controller protetti.
+📦 fast-food-project
+┣ 📂 backend
+┃ ┣ 📂 config          # Connessione a MongoDB e configurazioni globali
+┃ ┣ 📂 controllers     # Logica operativa (es. authController.js)
+┃ ┣ 📂 middleware      # Filtri di sicurezza (es. verifyToken, checkRole)
+┃ ┣ 📂 models          # Schemi Mongoose (User.js, Menu.js, Order.js)
+┃ ┣ 📂 routes          # Indirizzamento API (es. authRoutes.js)
+┃ ┣ 📜 .env            # Variabili d'ambiente segrete (NON caricato su GitHub)
+┃ ┣ 📜 server.js       # Cuore del backend, avvio Express e Swagger
+┃ ┗ 📜 package.json    # Dipendenze e script di avvio (npm start)
+┗ 📂 frontend
+  ┣ 📂 css             # Fogli di stile centralizzati
+  ┃ ┗ 📜 style.css     # Regole grafiche e Media Queries (Mobile-First)
+  ┣ 📂 images          # Asset visivi (es. logo.png)
+  ┣ 📂 js              # Logica client-side modulare
+  ┃ ┣ 📜 app.js        # Script globale (Gestione navbar e Logout)
+  ┃ ┗ 📜 accedi.js     # Fetch API per il Login e gestione Local Storage
+  ┣ 📜 index.html      # Homepage
+  ┣ 📜 accedi.html     # Pagina di autenticazione
+  ┗ 📜 menu.html       # Pagina ricerca piatti
 
 ## 🏗 Architettura e Tecnologie
 
