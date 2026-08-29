@@ -1,6 +1,6 @@
 # progetto-fast-food
 <div align="center">
-  <img src="./frontend/loghi/logo.png" alt="Logo Fast Food" width="200">
+  <img src="./frontend/loghi/logo.png" alt="Logo Fast Food" width="600">
   <h1>Fast Food API & Web Client</h1>
 </div>
 
