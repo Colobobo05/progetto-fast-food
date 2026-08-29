@@ -7,7 +7,8 @@
 **Progetto accademico per un sistema di gestione ordini basato su architettura Client-Server, API RESTful e pattern MVC.**
 
 Questo repository contiene l'intero ecosistema dell'applicazione. L'obiettivo del progetto è dimostrare la corretta implementazione delle moderne pratiche di sviluppo web, dalla persistenza dei dati fino alla sicurezza degli endpoint.
-'''
+
+<pre>
 📦 fast-food-project
 ┣ 📂 backend
 ┃ ┣ 📂 config          # Connessione a MongoDB e configurazioni globali
@@ -28,7 +29,7 @@ Questo repository contiene l'intero ecosistema dell'applicazione. L'obiettivo de
   ┣ 📜 index.html      # Homepage
   ┣ 📜 accedi.html     # Pagina di autenticazione
   ┗ 📜 menu.html       # Pagina ricerca piatti
-'''
+</pre>
 ## 🏗 Architettura e Tecnologie
 
 | Livello | Tecnologie | Ruolo Architetturale |
