@@ -38,7 +38,7 @@ Questo repository contiene l'intero ecosistema dell'applicazione. L'obiettivo de
   ┣ 📜 ordini.html     # Tracciamento e storico ordini cliente
   ┗ 📜 dashboard.html  # Pannello di gestione riservato al Ristoratore
 </pre>
-## 🏗 Architettura e Tecnologie
+##  Architettura e Tecnologie
 
 | Livello | Tecnologie | Ruolo Architetturale |
 | :--- | :--- | :--- |
@@ -48,7 +48,7 @@ Questo repository contiene l'intero ecosistema dell'applicazione. L'obiettivo de
 | **Sicurezza** | JWT, Bcrypt | Crittografia password e gestione degli accessi tramite sessioni stateless. |
 | **Testing** | Swagger (OpenAPI) | Documentazione interattiva degli endpoint RESTful. |
 
-## 🚀 Istruzioni per la Valutazione (Setup Locale)
+##  Istruzioni per la Valutazione (Setup Locale)
 
 1. **Clonare il repository** in locale e aprire due terminali separati.
 2. **Configurazione Backend:**
